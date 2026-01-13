@@ -1,0 +1,27 @@
+{
+	"name": "SinkCosmosDB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_COSMOSDB",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"containerName": {
+					"value": "@dataset().containerName",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"containerName": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "CosmosDbSqlApiCollection",
+		"schema": {},
+		"typeProperties": {
+			"collectionName": "container_prueba"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
